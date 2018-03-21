@@ -95,11 +95,11 @@ export class BookFormComponent implements OnInit {
     }
   }
 
-  addAuthorsControl() {
+  addAuthorControl() {
     this.authors.push(this.fb.control(null));
   }
 
-  addThumbnailsControl() {
+  addThumbnailControl() {
     this.thumbnails.push(this.fb.group({ url: null, title: null }));
   }
 
