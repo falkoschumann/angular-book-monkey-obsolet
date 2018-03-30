@@ -5,8 +5,6 @@ import { HttpModule } from '@angular/http';
 import localeDe from '@angular/common/locales/de';
 
 import { BookStoreService } from './shared/book-store.service';
-import { BookModule } from './book/book.module';
-import { AdminModule } from './admin/admin.module';
 import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './search/search.component';
 import { AppComponent } from './app.component';
@@ -23,9 +21,7 @@ registerLocaleData(localeDe);
   imports: [
     BrowserModule,
     HttpModule,
-    AppRoutingModule,
-    BookModule,
-    AdminModule
+    AppRoutingModule
   ],
   providers: [
     BookStoreService,
