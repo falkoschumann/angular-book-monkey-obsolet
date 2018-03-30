@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { BookResolver } from '../shared/book-resolver.service';
 import { BookFormComponent } from './book-form/book-form.component';
 
 const routes: Routes = [
@@ -10,7 +11,10 @@ const routes: Routes = [
   },
   {
     path: ':isbn',
-    component: BookFormComponent
+    component: BookFormComponent,
+    resolve: {
+      book: BookResolver
+    }
   }
 ];
 

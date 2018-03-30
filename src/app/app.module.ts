@@ -4,6 +4,7 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import localeDe from '@angular/common/locales/de';
 
+import { BookResolver } from './shared/book-resolver.service';
 import { BookStoreService } from './shared/book-store.service';
 import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './search/search.component';
@@ -24,8 +25,9 @@ registerLocaleData(localeDe);
     AppRoutingModule
   ],
   providers: [
-    BookStoreService,
-    { provide: LOCALE_ID, useValue: 'de' }
+    { provide: LOCALE_ID, useValue: 'de' },
+    BookResolver,
+    BookStoreService
   ],
   bootstrap: [AppComponent]
 })
