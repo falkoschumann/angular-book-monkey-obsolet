@@ -1,5 +1,6 @@
-import { Book } from './../shared/book';
 import { Component, Input } from '@angular/core';
+
+import { Book } from './../../shared/book';
 
 @Component({
   // tslint:disable-next-line:component-selector
