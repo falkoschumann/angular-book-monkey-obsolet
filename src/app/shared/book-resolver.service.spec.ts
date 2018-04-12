@@ -1,15 +1,15 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { BookResolverService } from './book-resolver.service';
+import { BookResolver } from './book-resolver.service';
 
 describe('BookResolverService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [BookResolverService]
+      providers: [BookResolver]
     });
   });
 
-  it('should be created', inject([BookResolverService], (service: BookResolverService) => {
+  it('should be created', inject([BookResolver], (service: BookResolver) => {
     expect(service).toBeTruthy();
   }));
 });
